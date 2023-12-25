@@ -1,81 +1,51 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Developer Çalışması
 
-# Getting Started
+## Genel Kriterler: 
+- Çalışma içinde yapılacak save / load işlemlerinin deviceStorage’a kaydedilmesi gerekmektedir.
+- Uygulama içerisinde en az 1 servis isteği yapılmalıdır.
+- Çalışmanın görsel tasarımı için istenilen kütüphane kullanılabilir.
+- Çalışma responsive design kurallarına uygun olarak yapılmalıdır.
+- Yapılacak çalışmada en az 3 ayrı sayfa olmalıdır.
+    - Ürün Liste Sayfası
+    - Ürün Detay Sayfası
+    - Sepet Sayfası
+- Çalışma için <b>Unit</b> test yazılmalıdır.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Çalışma için tamamlanması gereken işler: 
+- Uygulama, listeleme ekranı ile başlamalıdır. 
+- Listenecek olan elemanlar [şu adres](https://5fc9346b2af77700165ae514.mockapi.io/products) üzerinden çekilip ekrana basılacaktır. 
+- Ürünler 12’şer adet olarak ekranda gösterilmelidir. 12’den fazla ürün varsa infinite scroll özelliği eklenmelidir.
+- Listelenen ürünlerden biri seçildiğinde, o ürünün detaylarının bulunduğu ekrana yönlendirilecek ve ürün detayları gösterilecektir.
+- Ekranda bulunan “add to cart” butonuna basarak sepete ürün eklenmelidir.
+- Sepet Ekranında ürün sayısı arttırılıp azaltılabilmeli ve bu güncellemelere göre sepette güncellenmelidir.
+- Sepete eklenen ürünler, uygulama kapatılsa bile tekrar açıldığında kaldığı yerden devam edebilmelidir.
+- Ekranın sağ tarafında bulunan filtreler ile filtreleme işlemi yapılabilmelidir. Filtre ekranı modal olarak açıklacaktır.
+- Anasayfa da bulunan “Search“ alanı ile tüm ürünler arasında isim ile arama yapılıp, aşağıdaki liste güncellenmelidir.
+- Ürünlerden herhangi birinin üzerine tıklandığında “Ürün Detay” ekranına gidebilmeli ve sepete ekleme işlemi bu alandan da yapılabilmelidir.
+- Redux, Redux-Saga, ContextApi vb. kullanılması avantajlı olacaktır.
 
-## Step 1: Start the Metro Server
+Bonus: 
+- Bottom navigasyon alanında bulunan sepetteki ürün sayısı gösteren badge olmalıdır.
+- Favori Sayfası ve ekle/çıkar özelliği
+- Filtreler alanındaki "Search" işlemlerinin yapılması
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+<b>API Link:</b> https://5fc9346b2af77700165ae514.mockapi.io/products
 
-To start Metro, run the following command from the _root_ of your React Native project:
+<b>Ekran Görselleri Link:</b> https://www.figma.com/file/nxc84VSdrrf1tNoRcyDmvC/Eteration-React-Native-Case-Study
 
-```bash
-# using npm
-npm start
+> Not: Gönderilen tasarım, açıklama, görsel argüman sağlama açısından eklenmiştir. Görselde yer alan gölge, font, icon gibi özellikler aranmayacaktır.
 
-# OR using Yarn
-yarn start
-```
+## Ekran Görselleri:
 
-## Step 2: Start your Application
+### Anasayfa:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+<img src="./docs/home.png" width="400"/>
 
-### For Android
+### Detay Ekranı:
 
-```bash
-# using npm
-npm run android
+<img src="./docs/detail.png" width="400"/>
 
-# OR using Yarn
-yarn android
-```
+### Sepet Ekranı:
 
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-# EterationWorkCase
-# qwe
+<img src="./docs/cart.png" width="400"/>
+# ReactNativeWorkCase
